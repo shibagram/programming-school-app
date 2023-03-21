@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  name: 'Signup'
+  name: 'SignupView'
 }
 </script>
 
@@ -15,12 +15,12 @@ const password = ref('')
 const valid = ref(true)
 const errorMessage = ref('')
 const emailRules = [
-  (v) => !!v || 'メールアドレスは必須です。',
-  (v) => /.+@.+\..+/.test(v) || 'メールアドレスの形式が適切でありません。'
+  (v: string) => !!v || 'メールアドレスは必須です。',
+  (v: string) => /.+@.+\..+/.test(v) || 'メールアドレスの形式が適切でありません。'
 ]
 const passwordRules = [
-  (v) => !!v || 'パスワードは必須です。',
-  (v) => v.length >= 8 || 'パスワードは8文字以上に設定してください。'
+  (v: string) => !!v || 'パスワードは必須です。',
+  (v: string) => v.length >= 8 || 'パスワードは8文字以上に設定してください。'
 ]
 const signup: any = async () => {
   try {
