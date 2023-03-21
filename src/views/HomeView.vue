@@ -1,9 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Sidebar from '../components/layouts/Sidebar.vue'
+</script>
 
 <template>
   <v-app>
-    <v-main>
-      <v-btn>button</v-btn>
-    </v-main>
+    <Sidebar />
+    <v-main>home</v-main>
   </v-app>
 </template>
